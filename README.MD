@@ -4,10 +4,11 @@ Recuerda instalar las dependencias:
 
 ```
 npm install
+npm init
 ```
 
 Para ejecutar:
 
 ```
-npm start
+npm server.js
 ```

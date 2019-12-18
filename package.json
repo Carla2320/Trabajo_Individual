@@ -14,5 +14,14 @@
     "axios": "^0.19.0",
     "express": "^4.17.1",
     "hbs": "^4.0.6"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carla2320/Trabajo_Individual.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Carla2320/Trabajo_Individual/issues"
+  },
+  "homepage": "https://github.com/Carla2320/Trabajo_Individual#readme"
 }

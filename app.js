@@ -1,17 +1,9 @@
-const http = require('http');
+const axios = require('axios');
 
-http.createServer((req, res) => {
-
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-
-    let salida = {
-        nombre: 'Rodrigo',
-        edad: 37,
-        url: req.url
-    }
-    res.write(JSON.stringify(salida));
-    //res.write("Hola Mundo, desde nodeJS!");
-    res.end();
-}).listen(8085);
-
-console.log("Escuchando en el puerto 8085");
+const getClima = async(lat, lon) => {
+    const resp = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=ac7eaef281e24b3e15ae43d9c6ee567d&units=metric`);
+    //console.log(resp.data.Results[0]);
+    return resp.data.main.temp;
+}
+const hello = getClima(-0.225219, -78.5248)
+console.log(hello);
